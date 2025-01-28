@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ringraziamenti</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+        }
+        .code-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #222;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .code {
+            font-family: monospace;
+        }
+        .copy-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>RINGRAZIAMENTI</h1>
+    <p>I ringraziamenti sono crittografati con SHA256</p>
+    <div class="code-container">
+        <p class="code">CC373C1C7C406E473B5AE378A59653A810DC32520673405523F8933A3A0CB127</p>
+        <button class="copy-btn" onclick="copyCode()">📋</button>
+    </div>
+
+    <script>
+        function copyCode() {
+            const codeText = document.querySelector(".code").innerText;
+            navigator.clipboard.writeText(codeText).then(() => {
+                alert("Codice copiato!");
+            });
+        }
+    </script>
+</body>
+</html>
